@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'app1/css/style.css' %}" />
+</head>
+
+<body>
+    <header>
+        <div class="header-wrapper">
+            ここはロゴゾーン
+        </div>
+    </header>
+    <div class="menu-container">
+        <ul class="menulists">
+            <li><a href="{% url 'home' %}">HOME</a></li>
+            <li><a href="{% url 'about' %}">ABOUT</a></li>
+            <li><a href="{% url 'books' %}">BOOKS</a></li>
+            <li><a href="{% url 'booksmenu' %}">BOOKS MENU</a></li>
+    </div>
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <div class="footer-left">{{msg|safe}}</div>
+        <div class="footer-right">{{msg|safe}}</div>
+    </footer>
+    <div></div>
+    </body>
+    </html>

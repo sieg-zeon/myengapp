@@ -1,0 +1,14 @@
+{% extends 'app1/layout.html' %} {% block content %}
+<main>
+  <div class="container">
+    <h1>{{ title }}</h1>
+    <p>{{ msg | safe }}</p>
+    <P>{{ msg | safe }}</P>
+    <P>{{ msg | safe }}</P>
+    <P>{{ msg | safe }}</P>
+    <p>
+      <a href="{% url goToHome %}">{{ goToHome }}</a>
+    </p>
+  </div>
+</main>
+{% endblock %}
